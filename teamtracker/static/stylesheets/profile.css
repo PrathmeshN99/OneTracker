@@ -1,0 +1,184 @@
+            
+:root{
+    --col1: #FFFFFF;
+    --col2: #2B2B2F;
+    --col3: #ffa444;
+    --navtextcol: #142c44;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+html *{
+padding: 0px;
+margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    background: #ffc383;
+    background: #ffbb73;
+    background: #ffda73;
+    background: var(--col1);
+    background: var(--col3);
+    background: #f0c85a;
+}
+.navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: var(--col2);
+    background: #666a9abe;
+    background: #f7c7dd;
+    background: var(--col3);
+    background: #ffc383;
+    background: #ffbb73;
+    background: #ffda73;
+    background: var(--col3);
+    background: transparent;
+    /* background: linear-gradient(#00000000,#666a9abe,); */
+    height: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .navbarHeading{
+    padding-left: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--col1);
+    color: #142c44;
+    font-weight: 600;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 100px;
+    transition: all;
+    transition-duration: 0.2s;
+    font-size: 17px;
+    color:  #e04990;
+    color:  #666a9a;
+    color:  #4a52b2;
+    color: var(--col1);
+    color: #142c44;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover{
+    /* letter-spacing: 0.5px; */
+    /* background: var(--col1);
+    color: var(--col2); */
+    transition: all;
+    transition-duration: 0.2s;
+    color: var(--col1);
+    
+    /* border-color: var(--col1); */
+}
+
+body .container{
+    height: 87%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    background: url('/static/images/profilepic.png');
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: 15% center;
+}
+
+body .container .part1{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+body .container .part1 .border{
+    width: 50%;
+    height: 50%;
+    /* background: red; */
+    /* border: 10px solid black; */
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid var(--col3);
+    padding: 10px;
+    background: var(--col1);
+    
+    box-shadow: inset 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+body .container .part1 img{
+    width: 100%;
+    height: 100%;
+    background: #ffbb73;
+    background: #ffda73;
+    border-radius: 1000px;
+    /* border: 10px solid black;
+    border-radius: 1000px; */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+body .container .part2{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+body .container .part2 .info{
+    width: 100%;
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border-left: 2px solid var(--col3); */
+}
+body .container .part2 .info .data{
+    padding: 15px 0px;
+    margin: 10px 0px;
+    /* text-align: center; */
+    width: 100%;
+    background: var(--col3);
+    background: #142c44;
+    color: var(--col1);
+    display: flex;
+    flex-direction: row;
+}
+body .container .part2 .info .data div{
+    width: 50%;
+    padding-left: 10px;
+    text-align: center;
+}
+
+body .container .part2 .info::-webkit-scrollbar {
+    display: none;
+}
+body .container .part2 .info::-webkit-scrollbar-track {
+    display: none;
+}
+body .container .part2 .info::-webkit-scrollbar-thumb {
+display: none;}

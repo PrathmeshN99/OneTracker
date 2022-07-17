@@ -1,0 +1,142 @@
+:root{
+    --col1: #FFFFFF;
+    --col2: #2B2B2F;
+    --col3: #ffa444;
+    font-family: 'Montserrat', sans-serif;
+}
+
+::placeholder, input{
+    font-family: 'Montserrat', sans-serif;
+    /* color: col; */
+}
+
+
+html *{
+    margin:0;
+    padding:0;
+}
+.mainheading{
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 35px;
+    color: var(--col2);
+    display: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background: url("/static/images/intro2.jpg");
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: center left;
+    
+}
+.body .part{
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #F3F3F3;
+    background: transparent;
+    background: var(--col1);
+    /* background-color: red; */
+    color: var(--col2);
+    /* border-radius: 20px; */
+    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); */
+    border: 1.5px solid var(--col3);
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+}
+.body .part .heading{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--col3);
+}
+.body .part form{
+    width: 85%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.body .part form .inputfield{
+    width: 90%;
+    /* height: 15%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.body .part form .inputfield label{
+    font-size: 17px;
+    display: none;
+}
+.body .part form .inputfield input{
+    height: 35px;
+    width: 95%;
+    padding-left: 10px;
+    border: 0px;
+    border-bottom: 1px solid var(--col2);
+    /* border-right: 1px solid var(--col2); */
+    /* border-radius: 5px; */
+    background: transparent;
+}
+.body .part form .inputfield input:focus{
+    outline: none;
+    border-color: var(--col3);
+}
+.body .part form .buttonfield{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.body .part form .buttonfield button{
+    padding: 9px 23px;
+    color: var(--col1);
+    background: var(--col3);
+    border: 1.5px solid transparent;
+    border-radius: 100px;
+    margin: 10px 0px;
+    cursor: pointer;
+    width: 30%;
+    transition: all;
+    transition-duration: 0.2s;
+}
+.body .part form .buttonfield button:hover{
+    /* background: transparent;
+    color: var(--col3);
+    border-color: var(--col3); */
+}
+.body .part form .buttonfield button:active{
+    transform: scale(0.97);
+}
+.body .part form .inputfield p{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.body .part form .inputfield .signup{
+    color: var(--col3);
+}
+

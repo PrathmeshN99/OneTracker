@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'stylesheets/login.css' %}">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
+        <link rel="icon" href="/static/images/favicon2.png" type="image/png">
+    </head>
+    <body>
+        <div class="mainheading">
+            OneTracker
+        </div>
+
+        <div class="body" >
+
+            
+            <div class="part">
+
+                <div class="heading">
+                    Sign In
+                </div>
+                
+
+                <form action="" method="post">
+                    
+                    
+                    {% csrf_token %}
+                    <div class="inputfield">
+                        <label for="username">Username</label>
+                        <input type="text" required placeholder="Username" id="username" name="username"><br>
+                    </div>
+                    <div class="inputfield">
+                        <label for="username">Password</label>
+                        <input type="password" required placeholder="Password" id="password" name="password" ><br>
+                    </div>
+                    <br>
+                    <div class="buttonfield inputfield">
+                        <button type="submit">SIGN IN</button>
+                        <button type="reset">RESET</button>
+                    </div>
+                    <div class="inputfield">
+                        <p>Don't have an account yet? <br> <a class="signup" href="register">Sign Up</a></p>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+        
+    </body>
+</html>

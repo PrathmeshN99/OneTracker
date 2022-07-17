@@ -1,0 +1,252 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'stylesheet/home.css' %}">
+        <title>OneTracker | Dashboard </title>
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+        <link rel="icon" href="/static/images/favicon2.png" type="image/png">
+
+        <style>
+            
+            
+:root{
+    --col1: #FFFFFF;
+    --col2: #2B2B2F;
+    --col3: #ffa444;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+html *{
+padding: 0px;
+margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url("/static/images/home.png");
+    background-repeat: no-repeat;
+    background-size: 62%;
+    background-position: bottom right;
+    background-color: #f7c7dd;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: var(--col2);
+    background: #666a9abe;
+    background: #f7c7dd;
+    /* background: linear-gradient(#00000000,#666a9abe,); */
+    height: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .navbarHeading{
+    padding-left: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #666a9a;
+    font-weight: 600;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 100px;
+    transition: all;
+    transition-duration: 0.2s;
+    font-size: 17px;
+    color:  #e04990;
+    color:  #666a9a;
+    color:  #4a52b2;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover{
+    /* letter-spacing: 0.5px; */
+    /* background: var(--col1);
+    color: var(--col2); */
+    transition: all;
+    transition-duration: 0.2s;
+    color: var(--col1);
+    
+    /* border-color: var(--col1); */
+}
+
+.dashboardlinks{
+    width: 30%;
+    height: 85vh;
+    z-index: 100;
+    overflow: hidden;
+    overflow-y: scroll;
+    /* margin-top: 13%; */
+    margin-left: 100px;
+    /* text-align: center; */
+    /* background-color: red; */
+    
+    
+}
+.dashboardlinks .links{
+    width: 75%;
+    height: 200px;
+    background: red;
+    /* margin: 20px 0px; */
+    border-radius: 20px;
+    /* margin-left: 9%; */
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--col1);
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dashboardlinks .link2, .link4{
+    align-items: flex-end;
+    text-align: right;
+    
+}
+.dashboardlinks .links a {
+    width: 20%;
+}
+.dashboardlinks .links a img{
+    width: 100%;
+}
+.dashboardlinks .links a img:hover{
+    /* transform: scale(0.95); */
+}
+.dashboardlinks .links a img:active{
+    transform: scale(1.05);
+}
+.dashboardlinks .link1{
+    background: #4f59c8;
+    background-color: #70b6f3;
+    background-color: #fca944;
+    background-image: url('static/images/currentwork.png');
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    /* background: linear-gradient(45deg,#c0246c, #fe61ab); */
+}
+.dashboardlinks .link2{
+    background: #ea4b95;
+    background-color: #e04990;
+    background-image: url('static/images/manager.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    /* background: #f0b4d4; */
+    /* background: linear-gradient(45deg,#eca44c, #f8e043); */
+}
+.dashboardlinks .link3{
+    background: #ff9f29;
+    background-color: #fca944;
+    background-color: #70b6f3;
+    background-image: url('static/images/worker.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    /* background: linear-gradient(45deg,#eca44c, #f8e043); */
+}
+.dashboardlinks .link4{
+    background: #FBFBFB;
+
+    display: none;
+    /* background: linear-gradient(45deg,#eca44c, #f8e043); */
+}
+
+    .dashboardlinks::-webkit-scrollbar {
+        display: none;
+    }
+    .dashboardlinks::-webkit-scrollbar-track {
+        display: none;
+    }
+    .dashboardlinks::-webkit-scrollbar-thumb {
+    display: none;}
+
+        </style>
+    </head>
+    <body>
+
+            
+            <div class="navbar">
+                <a href="" class="navbarHeading">
+                    OneTracker
+                </a>
+                <ul>
+                    <li> <a href="home"> DashBoard </a></li>
+                    <li> <a href="profile"> Profile </a></li>
+                    <li> <a href="aboutApp"> About App </a></li>
+                    <li> <a href="quickGuide"> Quick Guide </a></li>
+                    <li> <a href="logout"> Log Out </a></li>
+                </ul>
+            </div>
+            
+            <div class="dashboardlinks">
+                <div class= "links link1">
+                    <div>
+                        <span>Visit My</span><br>
+                        <span>Working Projects</span>
+                    </div>
+                    <a href="myProjects"><img src="{% static 'images/nextbtn.png' %}" alt=""></a>
+                </div>
+                <div class= "links link2">
+                    <div>
+                        <span>Create</span>
+                        <span>Project</span><br>
+                        <span>For Your Team</span>
+                    </div>
+                    <a href="createProject"><img src="{% static 'images/nextbtn.png' %}" alt=""></a>
+                </div>
+                <div class= "links link3">
+                    <div>
+                        <span>Join Project</span><br>
+                        <span>Via Team Code</span>
+                    </div>
+                    <a href="joinProject"><img src="{% static 'images/nextbtn.png' %}" alt=""></a>
+                </div>
+                <div class= "links link4">
+                    <div>
+                        <span>Visit My</span><br>
+                        <span>Current Project</span>
+                    </div>
+                    <a href=""><img src="{% static 'images/nextbtn.png' %}" alt=""></a>
+                </div>
+            </div>
+
+
+
+            <!-- <h1>Hello User</h1> -->
+        
+        <script src="" async defer></script>
+    </body>
+</html>

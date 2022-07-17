@@ -1,0 +1,59 @@
+
+:root{
+    --col1: #FFFFFF;
+    --col2: #2B2B2F;
+    --col3: #ffa444;
+    font-family: 'Montserrat', sans-serif;
+}
+html *{
+padding: 0px;
+margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url("/static/images/home.jpg");
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: center right;
+}
+.navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: var(--col2);
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .navbarHeading{
+    padding-left: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--col1);
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--col1);
+    padding: 5px 15px;
+    border-radius: 100px;
+    transition: all;
+    transition-duration: 0.2s;
+    /* border-bottom: 1.5px solid transparent; */
+}
+.navbar ul li a:hover{
+    background: var(--col1);
+    color: var(--col2);
+    /* border-color: var(--col1); */
+}

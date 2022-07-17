@@ -1,0 +1,212 @@
+:root{
+    --col1: #FFFFFF;
+    --col2: #2B2B2F;
+    --col3: #ffa444;
+    --col3: #728cf3;
+    --col3: #607dee;
+    --col4: #e3e9ff;
+    --navtextcol: #142c44;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+::placeholder, input{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html *{
+    margin:0;
+    padding:0;
+}
+
+       
+:root{
+    --col1: #FFFFFF;
+    --col2: #2B2B2F;
+    --col3: #607dee;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+html *{
+padding: 0px;
+margin: 0px;
+}
+
+.navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: var(--col2);
+    background: #666a9abe;
+    background: #f7c7dd;
+    background: transparent;
+    /* background: linear-gradient(#00000000,#666a9abe,); */
+    height: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .navbarHeading{
+    padding-left: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #666a9a;
+    color: var(--col3);
+    color: var(--navtextcol);
+    font-weight: 600;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 100px;
+    transition: all;
+    transition-duration: 0.2s;
+    font-size: 17px;
+    color:  #e04990;
+    color:  #666a9a;
+    color:  #4a52b2;
+    color: var(--navtextcol);
+    font-weight: 600;
+}
+
+.navbar ul li a:hover{
+    /* letter-spacing: 0.5px; */
+    /* background: var(--col1);
+    color: var(--col2); */
+    transition: all;
+    transition-duration: 0.2s;
+    color: var(--col1);
+    
+    /* border-color: var(--col1); */
+}
+
+
+
+.mainheading{
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 35px;
+    color: var(--col1);
+    background-color: var(--col3);
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    display: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    /* background: url("/static/images/home.png"); */
+    background-repeat: no-repeat;
+    background-size: 62%;
+    background-position: bottom right;
+    background: #f7c7dd;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    background: #70b6f3;
+    background: #8dc4f4;
+    background: #9bcefc;
+}
+
+.body{
+    width: 100%;
+    height: 87%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background: red; */
+}
+.body>*{
+    width: 48%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.body>*>*{
+    width: 100%;
+}
+.body .heading{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--navtextcol);
+}
+.body .projects{
+    font-size: 15px;
+    font-weight: bold;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    width: 100%; 
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.body .projects .project{
+    color: var(--col1);
+    font-size: 17px;
+    padding: 20px 0px;
+    /* margin: 15px 0px 0px 0px; */
+    /* background: var(--col1); */
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid var(--navtextcol);
+    color: var(--navtextcol);
+    /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.283); */
+}
+.body .mid-line{
+    width: 0px;
+    height: 80%;
+    border-left: 1px solid var(--navtextcol);
+}
+.body .projects .project .projectname{
+    width: 90%;
+    padding-left: 15px;
+    
+}
+.body .projects .project .projectview{
+    width: 10%;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 1000px;
+    text-decoration: none;
+    background: var(--navtextcol);
+    color: var(--col1);
+    font-size: 15px;
+    transition: all;
+    transition-duration: 0.2s;
+}
+.body .projects .project .projectview:active{
+    transform: scale(0.97);
+}
+
+
+.body .projects::-webkit-scrollbar {
+    display: none;
+}
+.body .projects::-webkit-scrollbar-track {
+    display: none;
+}
+.body .projects::-webkit-scrollbar-thumb {
+display: none;}

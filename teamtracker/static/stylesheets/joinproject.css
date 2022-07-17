@@ -1,0 +1,241 @@
+:root{
+    --col1: #FFFFFF;
+    --col2: #2B2B2F;
+    --col3: #728cf3;
+    --col3: #607dee;
+    --col3: #f0c85a;
+    --col4: #142c44;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+::placeholder, input{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html *{
+padding: 0px;
+margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url("/static/images/home.png");
+    background-repeat: no-repeat;
+    background-size: 62%;
+    background-position: bottom right;
+    background-color: #f7c7dd;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: var(--col2);
+    background: #666a9abe;
+    background: #f7c7dd;
+    background: transparent;
+    /* background: linear-gradient(#00000000,#666a9abe,); */
+    height: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .navbarHeading{
+    padding-left: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #666a9a;
+    color: var(--col4);
+    font-weight: 600;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 100px;
+    transition: all;
+    transition-duration: 0.2s;
+    font-size: 17px;
+    color:  #e04990;
+    color:  #666a9a;
+    color:  #4a52b2;
+    color:  var(--col4);
+    font-weight: 600;
+}
+
+.navbar ul li a:hover{
+    /* letter-spacing: 0.5px; */
+    /* background: var(--col1);
+    color: var(--col2); */
+    transition: all;
+    transition-duration: 0.2s;
+    color: var(--col1);
+    
+    /* border-color: var(--col1); */
+}
+
+
+
+.mainheading{
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 35px;
+    color: var(--col1);
+    background-color: var(--col3);
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    display: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    /* animation: tr 0.3s; */
+    background: var(--col4);
+    background: var(--col3);
+    color: var(--col4);
+}
+@keyframes tr {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+        /* width: 0vw; */
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        /* width: 100vw; */
+    }
+}
+.body{
+    width: 90%;
+    height: 87%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background: url("/static/images/joinproject.png");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center right;
+    /* background: red; */
+    
+}
+.body .part{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: transparent;
+    /* background: var(--col1); */
+    color: var(--col2);
+    /* border-radius: 20px; */
+    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); */
+    border: 1.5px solid var(--col3);
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    /* background: green; */
+    /* border-right: 1.5px solid var(--col3);
+    border-radius: 0; */
+}
+.body .part .heading{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--col4);
+}
+.body .part form{
+    width: 85%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.body .part form .inputgrp{
+    width: 95%;
+    /* height: 15%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* border: 2px solid black; */
+    margin: 7px 0px;
+    
+}
+.body .part form .inputgrp label{
+    font-size: 14px;
+}
+.body .part form .inputgrp input{
+    height: 35px;
+    width: 97%;
+    padding-left: 10px;
+    border: 0px;
+    border-bottom: 1px solid var(--col2);
+    background: transparent;
+}
+.body .part form .inputgrp input:focus{
+    outline: none;
+    border-color: var(--col4);
+}
+
+
+.body .part form .btngrp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+
+.body .part form .btngrp button{
+    padding: 9px 23px;
+    color: var(--col1);
+    background: var(--col3);
+    border: 1.5px solid transparent;
+    border-radius: 100px;
+    margin: 10px 0px;
+    cursor: pointer;
+    background: var(--col4);
+    transition: all;
+    transition-duration: 0.2s;
+    /* width: 35%; */
+}
+.body .part form .btngrp button:hover{
+    /* background: transparent;
+    color: var(--col4);
+    border-color: var(--col4); */
+}
+.body .part form .btngrp button:active{
+    transform: scale(0.97);
+}
+
+.body .part form .inputgrp p{
+    width: 100%;
+    text-align: center;
+}
+
+.body .part form .inputgrp .signup{
+    color: var(--col3);
+}
+
