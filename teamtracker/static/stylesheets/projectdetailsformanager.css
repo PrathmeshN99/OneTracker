@@ -1,0 +1,223 @@
+:root{
+    --col1: #FFFFFF;
+    --col2: #2B2B2F;
+    /* --col3: #ffa444; */
+    --col3: #f7c7dd;
+    --col4: #4a52b2;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+
+html *{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+html{
+    overflow: hidden;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: var(--col3);
+    
+}
+
+
+.navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: var(--col2);
+    background: #666a9abe;
+    background: #f7c7dd;
+    background: transparent;
+    /* background: linear-gradient(#00000000,#666a9abe,); */
+    height: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--col4);
+}
+.navbar .navbarHeading{
+    padding-left: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    /* color: #4a52b2; */
+    font-weight: 600;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 100px;
+    transition: all;
+    transition-duration: 0.2s;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--col4);
+}
+
+.navbar ul li a:hover{
+    /* letter-spacing: 0.5px; */
+    /* background: var(--col1);
+    color: var(--col2); */
+    transition: all;
+    transition-duration: 0.2s;
+    color: var(--col1);
+    
+    /* border-color: var(--col1); */
+}
+
+
+
+
+
+
+
+.body{
+    width: 100%;
+    height: 87%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.body .projectDashboard{
+    width: 15%;
+    height: 100%;
+    color: var(--col4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body .projectDashboard>*{
+    padding: 20px 0px;
+    width: 100%;
+    cursor: pointer;
+    /* border-bottom: 1px solid var(--col4); */
+    text-align: center;
+    text-decoration: none;
+    transition: all;
+    transition-duration: 0.2s;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--col4);
+    /* border-top: 1px solid var(--col4); */
+    border-bottom: 1px solid var(--col4);
+    /* border-right: 1px solid var(--col4); */
+
+}
+.body .projectDashboard .linkForDefault{
+    /* border-top: 1px solid var(--col4); */
+}
+
+.body .projectDashboard>*:hover{
+    
+    transition: all;
+    transition-duration: 0.2s;
+    background: var(--col4);
+    /* background: var(--col2); */
+    /* background: var(--col2); */
+    color: var(--col1);
+}
+
+.body .projectDashboard>*:active{
+    background: var(--col2);
+}
+
+
+.body .container{
+    /* flex-grow: ; */
+    width: 84%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* background-color: red; */
+}
+
+
+body .container #blockProjectdetails{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body .container #blockAssignwork{
+    width: 100%;
+    height: 100%;
+ 
+ 
+    display: flex;
+}
+
+body .container #blockTrackprogress{
+    width: 100%;
+    height: 100%;
+ 
+ 
+    display: flex;
+}
+
+body .container #blockPastwork{
+    width: 100%;
+    height: 100%;
+ 
+ 
+    display: flex;
+}
+
+body .container #blockEmployerrcontribution{
+    width: 100%;
+    height: 100%;
+ 
+ 
+    display: flex;
+}
+
+
+body .container #blockViewteam{
+    width: 100%;
+    height: 100%;
+ 
+    display: flex;
+}
+
+body .container #blockRewards{
+    width: 100%;
+    height: 100%;
+ 
+    display: flex;
+}
+
+
+.container::-webkit-scrollbar {
+    width: 10px; 
+  }
+.container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--col4); 
+    border-radius: 0px;
+}

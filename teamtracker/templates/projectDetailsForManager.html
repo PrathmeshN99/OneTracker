@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>OneTracker | Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/stylesheets/projectdetailsformanager.css">
+
+
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+        <link rel="icon" href="/static/images/favicon2.png" type="image/png">
+
+
+    </head>
+    <body>
+        
+                 
+        <div class="navbar">
+            <a href="" class="navbarHeading">
+                OneTracker
+            </a>
+            <ul>
+                <li> <a href="home"> DashBoard </a></li>
+                <li> <a href="profile"> Profile </a></li>
+                <li> <a href="aboutapp"> About App </a></li>
+                <li> <a href="quickguide"> Quick Guide </a></li>
+                <li> <a href="logout"> Log Out </a></li>
+            </ul>
+        </div>
+
+        <div class="body">
+            <div class="projectDashboard">
+                <a href="#blockProjectdetails" id="   linkForForm">Project Details</a>
+                <a href="#blockAssignwork" id="   linkForAssignwork">Assign Work</a>
+                <a href="#blockTrackprogress" id="   linkForTrackprocess">Track Process</a>
+                <a href="#blockPastwork" id="   linkForPastwork">Past Work</a>
+                <a href="#blockEmployerrcontribution" id="   linkForEmployerrcontribution">Employee Contributions</a>
+                <a href="#blockViewteam" id="   linkForViewteam">View Team</a>
+                <a href="#blockRewards" id="   linkForRewards">Default</a>
+            </div>
+            
+            <div class="container">
+                
+                <div id="blockProjectdetails">
+                    {{ projectTitle }} 
+                    <button style="width: 10%;">End Project (Current Task Ended and Form for next/new Task opened)</button>
+                </div>
+
+                <div id="blockAssignwork">
+                    assign work to indivisual team member
+                </div>
+
+                <div id="blockTrackprogress">
+                    Track Process
+                </div>
+
+                <div id="blockPastwork">
+                    Past Work Done
+                </div>
+
+                <div id="blockEmployerrcontribution">
+                    Past Indivisual Work Done
+                </div>
+                
+                <div id="blockViewteam">
+                    see team
+                </div>
+
+                <div id="blockRewards">
+                    Distribute Rewards
+                </div>
+            </div>
+            
+        </div>
+
+
+
+    </body>
+</html>

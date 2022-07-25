@@ -40,10 +40,14 @@
 
                     {% for project in projects %} 
                     <div class="project">
-                        <div class="projectname">{{ project.title }}</div>
-                        <a href="" class="projectview">View</a>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <div class="projectname" name="projectTitle">{{ project.title }}</div>
+                            <button type="submit" name="view" class="projectview">Submit</button>
+                        </form>
                     </div>
                     {% endfor %}
+
             
                 </div>
 
@@ -57,14 +61,14 @@
                     Projects That You Joined
                 </div>
                 <div class="projects">
+
+                    {% for project in memberProjects %} 
                     <div class="project">
-                        <div class="projectname">Name</div>
-                        <a href="" class="projectview">View</a>
+                        <div class="projectname">{{ project.title }}</div>
+                        <a name="view" href="projectDetails" class="projectview">View</a>
                     </div>
-                    <div class="project">
-                        <div class="projectname">Name</div>
-                        <a href="" class="projectview">View</a>
-                    </div>
+                    {% endfor %}
+
                 </div>
 
             </div>
