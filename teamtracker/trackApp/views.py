@@ -1,11 +1,15 @@
+from unicodedata import name
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.contrib import messages
+from .decorators import unauthenticated_user, allowed_users
 from .models import Project
 import numpy as np
+from django.contrib.auth.models import Group
 
+@unauthenticated_user
 def register(request):
     if request.method == 'POST':
         first_name = request.POST['first_name']   
@@ -20,12 +24,15 @@ def register(request):
 
         else:    
             user = User.objects.create_user(username=user_name,first_name=first_name,last_name=last_name,email=email,password=password)
+            group = Group.objects.get(name='Member')
+            user.groups.add(group)
             user.save()
             print("Created user " + user_name)
             return redirect('/')
     else:
         return render(request,'register.html')
- 
+
+@unauthenticated_user
 def login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -47,13 +54,13 @@ def login(request):
     else:
         return render(request,'login.html')
 
-@login_required
+@login_required(login_url='login')
 def home(request):
     return render(request,'home.html')
 
 @login_required
+@allowed_users(allowed_roles=['Manager'])
 def profile(request):
-    # def sample_view(request):
     current_user = request.user
     print(current_user)
     print(type(current_user))
@@ -80,9 +87,13 @@ def logout_view(request):
 def createProject(request):
     if request.method == 'POST':
         title = request.POST['title']
-        user = request.user
+        users = User.objects.filter(username=request.user)[0].id
         content = request.POST['content']
-        project = Project.objects.create(title=title,user=user,content=content)
+        random_num = np.random.randint(1001,9999) 
+        unique_code = str(request.user)[:4] + str(random_num)
+        project = Project.objects.create(title=title,content=content,unique_code=unique_code)
+        project.user.add(users)
+        print(users)
         project.save()
         return redirect('/myProjects')
     return render(request,'createProject.html')
@@ -91,8 +102,8 @@ def joinProject(request):
     return render(request,'joinProject.html')
 
 def myProjects(request):
-        title = Project.objects.filter(user=request.user)[0].title
-        context = { 'title' : title }
+        projects = Project.objects.filter(user=request.user)
+        context = { 'projects' : projects }
         return render(request,'myProjects.html',context)
 
     

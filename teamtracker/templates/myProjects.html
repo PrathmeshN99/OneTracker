@@ -37,14 +37,14 @@
                     Projects Created By You
                 </div>
                 <div class="projects">
+
+                    {% for project in projects %} 
                     <div class="project">
-                        <div class="projectname">{{ title }}</div>
+                        <div class="projectname">{{ project.title }}</div>
                         <a href="" class="projectview">View</a>
                     </div>
-                    <div class="project">
-                        <div class="projectname">Name</div>
-                        <a href="" class="projectview">View</a>
-                    </div>
+                    {% endfor %}
+            
                 </div>
 
             </div>
